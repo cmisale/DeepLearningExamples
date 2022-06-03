@@ -239,7 +239,7 @@ def load_raw(spark, folder, day_range):
     str_fields = [StructField('_c%d' % i, StringType()) for i in CAT_COLS]
 
     schema = StructType(label_fields + int_fields + str_fields)
-    paths = [os.path.join(folder, 'day_%d' % i) for i in day_range]
+    paths = [os.path.join(folder, 'train_day_%d' % i) for i in day_range]
     return (spark
         .read
         .schema(schema)

@@ -20,8 +20,8 @@ set -x
 download_dir=${1:-'/data/dlrm/criteo'}
 
 cd ${download_dir}
-for i in $(seq 0 23); do
-    filename=day_${i}
+for i in $(seq 0 6); do
+    filename=train_day_${i}
     if [ -f $filename ]; then
         echo "$filename exists, OK"
     else
