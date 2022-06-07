@@ -67,7 +67,7 @@ RUN source activate rapids &&                                  \
 
 FROM base AS image-machine-DGX-2
 ARG NUMBER_OF_GPUS
-ENV NUMBER_OF_GPUS ${NUMBER_OF_GPUS:-16}
+ENV NUMBER_OF_GPUS ${NUMBER_OF_GPUS:-8}
 
 FROM base AS image-machine-DGX-A100
 ENV NUMBER_OF_GPUS 8

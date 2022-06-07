@@ -20,10 +20,10 @@
 
 # below numbers should be adjusted according to the resource of your running environment
 # set the total number of CPU cores, spark can use
-export TOTAL_CORES=32
+export TOTAL_CORES=256
 
 # set the number of executors
-export NUM_EXECUTORS=4
+export NUM_EXECUTORS=8
 
 # the cores for each executor, it'll be calculated
 export NUM_EXECUTOR_CORES=$((${TOTAL_CORES}/${NUM_EXECUTORS}))
